@@ -1,0 +1,7 @@
+## ava
+
+<https://github.com/avajs/ava/issues/1118>
+
+## webpack
+
+* todo: config `module.rules` の書き方だとうまくいってない

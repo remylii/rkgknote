@@ -1,0 +1,13 @@
+# Apple
+.DS_Store
+.AppleDouble
+
+# Thumbnails
+._*
+
+# Logs
+*.log
+
+# Dependency directory
+node_modules
+public/bundle.js
