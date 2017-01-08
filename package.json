@@ -6,7 +6,9 @@
   "description": "",
   "scripts": {
     "start": "yarn run watch:js & yarn run server",
+    "start:local": "yarn run watch:js & yarn run server:browsersync",
     "server": "http-server public -p 3207 -c-1",
+    "server:browsersync": "browser-sync start --server public --files public --no-open",
     "build:js": "webpack",
     "watch:js": "webpack -w",
     "test": "NODE_ENV=test ava"
@@ -26,5 +28,8 @@
     "require": [
       "babel-register"
     ]
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.6"
   }
 }
