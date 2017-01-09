@@ -9,8 +9,12 @@
     "start:local": "yarn run watch:css & yarn run watch:js & yarn run server:browsersync",
     "server": "http-server public -p 3207 -c-1",
     "server:browsersync": "browser-sync start --server public --files public --no-open",
+    "compress:css": "csswring public/bundle.css > public/bundle.min.css",
+    "compress:js": "uglifyjs public/bundle.js > public/bundle.min.js",
     "build:js": "webpack",
+    "build:js:production": "yarn run compress:js && mv public/bundle.min.js public/bundle.js",
     "build:css": "postcss -c .postcssrc.json",
+    "build:css:production": "yarn run compress:css && mv public/bundle.min.css public/bundle.css",
     "watch:js": "webpack -w",
     "watch:css": "postcss -w -c .postcssrc.json",
     "test": "NODE_ENV=test ava"
@@ -35,6 +39,7 @@
     "postcss-import": "^9.0.0",
     "postcss-nesting": "^2.3.1",
     "postcss-sorting": "^1.7.0",
+    "uglifyjs": "^2.4.10",
     "webpack": "^1.14.0"
   },
   "ava": {
