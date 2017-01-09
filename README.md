@@ -1,5 +1,7 @@
 # rkgknote
 
+[![Build Status](https://travis-ci.org/remylii/rkgknote.svg?branch=master)](https://travis-ci.org/remylii/rkgknote)
+
 ## Stack
 
 - package manager: yarn
