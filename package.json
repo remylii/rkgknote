@@ -5,15 +5,18 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "yarn run watch:js & yarn run server",
-    "start:local": "yarn run watch:js & yarn run server:browsersync",
+    "start": "yarn run watch:css & yarn run watch:js & yarn run server",
+    "start:local": "yarn run watch:css & yarn run watch:js & yarn run server:browsersync",
     "server": "http-server public -p 3207 -c-1",
     "server:browsersync": "browser-sync start --server public --files public --no-open",
     "build:js": "webpack",
+    "build:css": "postcss -c .postcssrc.json",
     "watch:js": "webpack -w",
+    "watch:css": "postcss -w -c .postcssrc.json",
     "test": "NODE_ENV=test ava"
   },
   "dependencies": {
+    "autoprefixer": "^6.6.1",
     "ava": "^0.17.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -21,7 +24,17 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
+    "csswring": "^5.1.1",
     "http-server": "^0.9.0",
+    "postcss": "^5.2.8",
+    "postcss-apply": "^0.4.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "postcss-import": "^9.0.0",
+    "postcss-nesting": "^2.3.1",
+    "postcss-sorting": "^1.7.0",
     "webpack": "^1.14.0"
   },
   "ava": {
