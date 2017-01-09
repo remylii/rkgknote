@@ -19,7 +19,8 @@
     "watch:css": "postcss -w -c .postcssrc.json",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
-    "test": "NODE_ENV=test ava"
+    "test": "NODE_ENV=test ava",
+    "cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
     "autoprefixer": "^6.6.1",
@@ -35,6 +36,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.9.0",
     "http-server": "^0.9.0",
+    "nyc": "^10.0.0",
     "postcss": "^5.2.8",
     "postcss-apply": "^0.4.0",
     "postcss-cli": "^2.6.0",

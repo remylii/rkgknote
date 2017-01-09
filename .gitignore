@@ -8,7 +8,12 @@
 # Logs
 *.log
 
+# Coverage directory used by tools like istanbul
+coverage
+
 # Dependency directory
 node_modules
 public/bundle.js
 public/bundle.css
+.nyc_output
+
