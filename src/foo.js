@@ -1,3 +1,4 @@
-export default function() {
+/* @flow */
+export default function(): number {
   return 1;
 }
