@@ -1,0 +1,20 @@
+language: node_js
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+before_script:
+  - npm install -g yarn
+
+script:
+  - npm run cover
+
+branches:
+  only:
+    - master
+
