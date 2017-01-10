@@ -37,6 +37,10 @@ Use npm-scripts.
 - test
 - cover
 
+### stage
+
+- html-minifier
+
 ## License
 
 MIT
