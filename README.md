@@ -11,7 +11,7 @@
 - coverage tools: nyc
 - builder: webpack
 - css: postcss
-- minify: csswring, ugfily-js
+- minify: csswring, ugfily-js, html-minifier
 - server: http-server, browser-sync
 
 ## Usage
@@ -22,24 +22,29 @@ $ yarn start
 #($ yarn start:local)
 ```
 
+### Generating distribution
+
+```
+$ yarn run build:production
+```
+
 ## Tasks
 
 Use npm-scripts.
 
+- server
 - build:js
 - build:css
+- build:production
 - watch:js
 - watch:css
 - compress:js
 - compress:css
+- compress:html
 - typecheck
 - lint
 - test
 - cover
-
-### stage
-
-- html-minifier
 
 ## License
 

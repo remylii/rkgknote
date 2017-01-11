@@ -17,3 +17,6 @@ public/bundle.js
 public/bundle.css
 .nyc_output
 
+# Distribution
+dist/*
+!dist/.gitkeep
