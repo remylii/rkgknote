@@ -3,7 +3,10 @@
   "author": "remyli <rapi.remyli@gmail.com>",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "",
+  "description": "ver January 2017",
+  "keywords": [
+    "css", "javascript"
+  ],
   "scripts": {
     "start": "yarn run watch:css & yarn run watch:js & yarn run server",
     "start:local": "yarn run watch:css & yarn run watch:js & yarn run server:browsersync",
