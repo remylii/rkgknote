@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "description": "ver January 2017",
   "keywords": [
-    "css", "javascript"
+    "javascript", "css"
   ],
   "scripts": {
     "start": "yarn run watch:css & yarn run watch:js & yarn run server",
