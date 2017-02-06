@@ -7,25 +7,17 @@ module.exports = {
   },
 
   module: {
-    // rules: [
-    //   {
-    //     test: /\.js$/,
-    //     use: ["babel-loader"],
-    //     exclude: /node_modules/
-    //   }
-    // ]
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015']
-        }
+        use: "babel-loader",
+        exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    modules: [
+      "src", "node_modules"
+    ]
   }
 };
