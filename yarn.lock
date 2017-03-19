@@ -1310,6 +1310,10 @@ caseless@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
 
+"cell@github:jkroso/cell":
+  version "1.0.2"
+  resolved "https://codeload.github.com/jkroso/cell/tar.gz/6db4991ebff09e344d7c1211c4abdcc62aff479e"
+
 center-align@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"
@@ -2048,6 +2052,12 @@ eslint-module-utils@^2.0.0:
     debug "2.2.0"
     pkg-dir "^1.0.0"
 
+eslint-plugin-flowtype@^2.30.3:
+  version "2.30.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.30.3.tgz#57835d2c0ed388da7a2725803ec32af2f437c301"
+  dependencies:
+    lodash "^4.15.0"
+
 eslint-plugin-import@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.2.0.tgz#72ba306fad305d67c4816348a4699a4229ac8b4e"
@@ -2320,6 +2330,13 @@ flat-cache@^1.2.1:
 flow-bin@^0.38.0:
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.38.0.tgz#3ae096d401c969cc8b5798253fb82381e2d0237a"
+
+flowtype@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/flowtype/-/flowtype-2.0.0.tgz#8636bcb267659ff2ed575cd8bfb36372b90311a2"
+  dependencies:
+    merge yields/merge
+    viewport "2"
 
 fn-name@^2.0.0:
   version "2.0.1"
@@ -3370,7 +3387,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3469,6 +3486,10 @@ merge-source-map@^1.0.2:
   resolved "https://registry.yarnpkg.com/merge-source-map/-/merge-source-map-1.0.3.tgz#da1415f2722a5119db07b14c4f973410863a2abf"
   dependencies:
     source-map "^0.5.3"
+
+"merge@github:yields/merge":
+  version "1.0.1"
+  resolved "https://codeload.github.com/yields/merge/tar.gz/2f357cb501cd06f1a86394b7817e5df73c53f644"
 
 micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
@@ -5206,6 +5227,12 @@ verror@1.3.6:
   resolved "https://registry.yarnpkg.com/verror/-/verror-1.3.6.tgz#cff5df12946d297d2baaefaa2689e25be01c005c"
   dependencies:
     extsprintf "1.0.2"
+
+viewport@2:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/viewport/-/viewport-2.0.1.tgz#8f5e39fcf5b58f839366314cd6914af9400912a4"
+  dependencies:
+    cell jkroso/cell
 
 vlq@^0.2.1:
   version "0.2.1"

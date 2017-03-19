@@ -1,5 +1,6 @@
 [ignore]
 .*/node_modules/ava/.*.flow
+.*/node_modules/.*
 
 [include]
 
