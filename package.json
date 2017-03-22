@@ -19,7 +19,7 @@
     "compress:html": "html-minifier -c .htmlminifierrc --file-ext html --input-dir public --output-dir dist",
     "build:production": "NODE_ENV=production yarn run compress:html & webpack && yarn run compress:css && yarn run compress:js",
     "watch": "webpack -w",
-    "typecheck": "flow",
+    "typecheck": "flow check",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
     "test": "NODE_ENV=test ava",
