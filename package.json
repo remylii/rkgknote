@@ -62,6 +62,7 @@
     "postcss-smart-import": "^0.6.10",
     "sanitize.css": "^5.0.0",
     "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
     "uglify-js": "^2.7.5",
     "webpack": "^2.2.1"
   },
