@@ -1,6 +1,2 @@
-@import "html5reset-1.6.1.css";
-
-.description {
-  font-size: 11px;
-  color: #f22;
-}
+@import "./vendor/sanitize.css";
+@import "./app.css";

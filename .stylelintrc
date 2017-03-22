@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "double",
+    "value-no-vendor-prefix": true,
+    "declaration-block-semicolon-space-before": "never",
+    "declaration-block-trailing-semicolon": "always",
+  }
+}

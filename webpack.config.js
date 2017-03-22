@@ -21,7 +21,7 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           use: [
-            'css-loader?importLoaders=1',
+            'css-loader',
             'postcss-loader'
           ]
         })
@@ -37,7 +37,8 @@ module.exports = {
 
   resolve: {
     modules: [
-      "src", "node_modules"
+      path.resolve(__dirname, './src'),
+      'node_modules'
     ]
   }
 };
