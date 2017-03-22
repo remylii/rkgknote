@@ -10,7 +10,7 @@
 - test runner: ava
 - coverage tools: nyc
 - builder: webpack
-- css: postcss
+- css: webpack use postcss
 - minify: csswring, ugfily-js, html-minifier
 - server: http-server, browser-sync
 
@@ -33,11 +33,13 @@ $ yarn run build:production
 Use npm-scripts.
 
 - server
-- build:js
-- build:css
+- build
+- ~~build:js~~
+- ~~build:css~~
 - build:production
-- watch:js
-- watch:css
+- watch
+- ~~watch:js~~
+- ~~watch:css~~
 - compress:js
 - compress:css
 - compress:html
@@ -45,6 +47,14 @@ Use npm-scripts.
 - lint
 - test
 - cover
+
+### if use postcss-cli
+
+```sh
+postcss -c postcss.config.js -o public/bundle.css styles/main.css
+```
+
+
 
 ## License
 

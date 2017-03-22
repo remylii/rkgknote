@@ -1,9 +1,13 @@
-module.exports = {
-  entry: "./src/main.js",
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+module.exports = {
+  context: path.resolve(__dirname, 'src'),
+  entry: './main.js',
   output: {
-    path: "public",
-    filename: "bundle.js"
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js',
+    chunkFilename: '[id].js'
   },
 
   module: {
@@ -12,9 +16,25 @@ module.exports = {
         test: /\.js$/,
         use: "babel-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            'css-loader?importLoaders=1',
+            'postcss-loader'
+          ]
+        })
       }
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin({
+      filename: "bundle.css"
+    })
+  ],
+
   resolve: {
     modules: [
       "src", "node_modules"
