@@ -15,6 +15,7 @@ coverage
 node_modules
 public/bundle.js
 public/bundle.css
+public/*.map
 .nyc_output
 
 # Distribution
