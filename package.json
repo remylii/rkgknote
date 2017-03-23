@@ -11,10 +11,8 @@
   "scripts": {
     "start": "yarn run watch & yarn run server",
     "start:dev": "yarn run webpack-dev-server",
-    "start:local": "yarn run watch & yarn run server:browsersync",
     "server": "http-server public -p 3207 -c-1",
     "server:production": "http-server dist -p 3207 -c-1",
-    "server:browsersync": "browser-sync start --server public --files public --no-open --port 3207",
     "compress:css": "csswring public/bundle.css > dist/bundle.css",
     "compress:js": "uglifyjs public/bundle.js > dist/bundle.js",
     "compress:html": "html-minifier -c .htmlminifierrc --file-ext html --input-dir public --output-dir dist",
@@ -74,7 +72,6 @@
     ]
   },
   "devDependencies": {
-    "browser-sync": "^2.18.7",
     "webpack-dev-server": "^2.4.2"
   },
   "browserslist": [
