@@ -9,6 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     chunkFilename: '[id].js'
   },
+  devtool: 'source-map',
 
   module: {
     rules: [
@@ -40,5 +41,18 @@ module.exports = {
       path.resolve(__dirname, './src'),
       'node_modules'
     ]
+  },
+
+  devServer: {
+    contentBase: './public',
+    compress: true,
+    port: 9000,
+    inline: true,
+    historyApiFallback: true,
+    stats: {
+      version: false,
+      hash: false,
+      chunckModules: false
+    }
   }
 };
