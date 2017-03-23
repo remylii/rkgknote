@@ -9,23 +9,20 @@
     "css"
   ],
   "scripts": {
-    "start": "yarn run watch & yarn run server",
-    "start:dev": "yarn run webpack-dev-server",
-    "server": "http-server public -p 3207 -c-1",
-    "server:production": "http-server dist -p 3207 -c-1",
+    "start": "yarn run webpack-dev-server",
+    "server:dist": "http-server dist -p 3207 -c-1",
+    "compress": "yarn run compress:html & yarn run compress:css & yarn run compress:js ",
     "compress:css": "csswring public/bundle.css > dist/bundle.css",
     "compress:js": "uglifyjs public/bundle.js > dist/bundle.js",
     "compress:html": "html-minifier -c .htmlminifierrc --file-ext html --input-dir public --output-dir dist",
-    "build:production": "NODE_ENV=production yarn run compress:html & webpack && yarn run compress:css && yarn run compress:js",
+    "build:dist": "yarn run compress && yarn run server:dist",
     "watch": "webpack -w",
     "typecheck": "flow check",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
+    "csslint": "postcss -c postcss.config.js -o public/bundle.css styles/main.css",
     "test": "NODE_ENV=test ava",
-    "cover": "nyc --reporter=lcov --reporter=text yarn test",
-    "watch:js": "webpack -w",
-    "build:css": "postcss -c postcss.config.js -o public/bundle.css styles/main.css",
-    "watch:css": "postcss -w"
+    "cover": "nyc --reporter=lcov --reporter=text yarn test"
   },
   "dependencies": {
     "autoprefixer": "^6.6.1",

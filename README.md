@@ -6,54 +6,45 @@
 
 - package manager: yarn
 - transpiler: babel
-- linter: eslint, flow
+- linter: eslint, flowtype, stylelint
 - test runner: ava
 - coverage tools: nyc
 - builder: webpack
 - css: webpack use postcss
 - minify: csswring, ugfily-js, html-minifier
-- server: http-server, browser-sync
+- server: webpack-dev-server, http-server
 
 ## Usage
 
 ```
 $ yarn install
 $ yarn start
-#($ yarn start:local)
 ```
 
 ### Generating distribution
 
 ```
-$ yarn run build:production
+$ yarn run build:dist
 ```
 
 ## Tasks
 
 Use npm-scripts.
 
-- server
-- build
-- ~~build:js~~
-- ~~build:css~~
-- build:production
+- start
+- server:dist
+- build:dist
 - watch
-- ~~watch:js~~
-- ~~watch:css~~
-- compress:js
-- compress:css
-- compress:html
+- compress
+  - compress:js # in webpack, soon
+  - compress:css # in webpack, soon
+  - compress:html # in webpack, soon
 - typecheck
 - lint
+- lint:fix
+- csslint
 - test
 - cover
-
-### if use postcss-cli
-
-```sh
-postcss -c postcss.config.js -o public/bundle.css styles/main.css
-```
-
 
 
 ## License
